@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CFB11E82-12EF-444C-B387-CBBF8DD0F27F}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{BCC0A748-0D5B-4F45-B32F-C2F9CA49F08B}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TestApp</RootNamespace>
-    <AssemblyName>TestApp</AssemblyName>
+    <RootNamespace>BaseAPI</RootNamespace>
+    <AssemblyName>BaseAPI</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -32,24 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Abot">
-      <HintPath>..\..\ThirdParties\Abot\Abot.dll</HintPath>
-    </Reference>
-    <Reference Include="AutoMapper">
-      <HintPath>..\..\ThirdParties\Abot\AutoMapper.dll</HintPath>
-    </Reference>
-    <Reference Include="CsQuery">
-      <HintPath>..\..\ThirdParties\Abot\CsQuery.dll</HintPath>
-    </Reference>
-    <Reference Include="HtmlAgilityPack">
-      <HintPath>..\..\ThirdParties\Abot\HtmlAgilityPack.dll</HintPath>
-    </Reference>
-    <Reference Include="log4net">
-      <HintPath>..\..\ThirdParties\Abot\log4net.dll</HintPath>
-    </Reference>
-    <Reference Include="Robots">
-      <HintPath>..\..\ThirdParties\Abot\Robots.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -59,21 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="ApiInterface.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BaseAPI\BaseAPI.csproj">
-      <Project>{bcc0a748-0d5b-4f45-b32f-c2f9ca49f08b}</Project>
-      <Name>BaseAPI</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\YandexAPI\YandexAPI.csproj">
-      <Project>{fe5acbaf-ebe6-4c34-995d-4dd30a83cc60}</Project>
-      <Name>YandexAPI</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

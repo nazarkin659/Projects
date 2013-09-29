@@ -12,9 +12,16 @@ namespace TestApp
     {
         static void Main(string[] args)
         {
+            YandexAPI.Main s = new YandexAPI.Main();
+            s.To = "ru";
+            s.Sourse = "Russian is a very big country.";
+
+            s.GetResult();
+            string stop = "";
+
             using (var abot = new AbotTestApp())
             {
-                abot.Enter(null);
+                abot.Enter(new string[] { "http://www.best4hunting.com" });
             }
         }
     }
@@ -25,7 +32,7 @@ namespace TestApp
 
 
 
-    class AbotTestApp:IDisposable
+    class AbotTestApp : IDisposable
     {
         public void Enter(string[] args)
         {
@@ -37,7 +44,9 @@ namespace TestApp
             IWebCrawler crawler;
 
             //Uncomment only one of the following to see that instance in action
-            crawler = GetDefaultWebCrawler();
+            //crawler = GetDefaultWebCrawler();
+
+            crawler = GetManuallyConfiguredWebCrawler();
             //crawler = GetManuallyConfiguredWebCrawler();
             //crawler = GetCustomBehaviorUsingLambdaWebCrawler();
 
@@ -75,7 +84,7 @@ namespace TestApp
             config.IsRespectRobotsDotTextEnabled = false;
             config.IsUriRecrawlingEnabled = false;
             config.MaxConcurrentThreads = 10;
-            config.MaxPagesToCrawl = 10;
+            config.MaxPagesToCrawl = 99999;
             config.MaxPagesToCrawlPerDomain = 0;
             config.MinCrawlDelayPerDomainMilliSeconds = 1000;
             config.UserAgentString = "abot v@ABOTASSEMBLYVERSION@ http://code.google.com/p/abot";
@@ -186,7 +195,7 @@ namespace TestApp
 
         public void Dispose()
         {
-            
+
         }
     }
 }
