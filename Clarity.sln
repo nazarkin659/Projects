@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clarity", "Clarity.csproj", "{12ED035D-45AD-47E1-A1B7-A454F09D8737}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "TestApp\TestApp.csproj", "{CFB11E82-12EF-444C-B387-CBBF8DD0F27F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +9,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{12ED035D-45AD-47E1-A1B7-A454F09D8737}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{12ED035D-45AD-47E1-A1B7-A454F09D8737}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{12ED035D-45AD-47E1-A1B7-A454F09D8737}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{12ED035D-45AD-47E1-A1B7-A454F09D8737}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFB11E82-12EF-444C-B387-CBBF8DD0F27F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFB11E82-12EF-444C-B387-CBBF8DD0F27F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFB11E82-12EF-444C-B387-CBBF8DD0F27F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFB11E82-12EF-444C-B387-CBBF8DD0F27F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
